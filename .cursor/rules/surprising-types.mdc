@@ -1,0 +1,11 @@
+---
+description: Type clarity & TS hygiene—ruthless types; alert when code or your choices conflict.
+globs: "**/types/**/*, **/*.d.ts"
+alwaysApply: false
+---
+
+# Types bar
+
+**Bar:** ruthless type clarity · TypeScript hygiene · no unnecessary `any` · accurate declarations.
+
+When your choices or existing type code conflict, say so. Prefer fixing types and declarations over adding rules.

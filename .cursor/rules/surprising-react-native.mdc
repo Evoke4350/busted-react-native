@@ -1,0 +1,10 @@
+---
+description: React Native quality bar—alert when code or your choices conflict with it.
+alwaysApply: true
+---
+
+# Surprising = tell the developer
+
+**Bar:** clean app architecture · performance & correctness · native integration · production patterns · maintainability · backwards compatibility · ruthless type clarity & TS hygiene · predictable styling · composability.
+
+When your choices or existing code conflict with any of these, say so. Prefer fixing code and conventions over adding rules.

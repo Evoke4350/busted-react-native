@@ -1,0 +1,11 @@
+---
+description: React Native styling bar—predictable, composable styles; alert when code conflicts.
+globs: "**/*.css, **/tailwind.config.*"
+alwaysApply: false
+---
+
+# Styling bar
+
+**Bar:** predictable styling · composability · consistent design tokens · NativeWind/Tailwind conventions.
+
+When your choices or existing style code conflict, say so. Prefer fixing style and config over adding rules.

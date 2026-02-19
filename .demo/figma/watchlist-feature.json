@@ -1,0 +1,477 @@
+{
+  "name": "Watchlist Feature - Movie App",
+  "version": "1.0",
+  "lastModified": "2026-02-15T10:30:00Z",
+  "pages": [
+    {
+      "name": "Watchlist Feature",
+      "frames": [
+        {
+          "name": "Detail Screen - Save Button (Unsaved)",
+          "id": "frame-detail-unsaved",
+          "width": 390,
+          "height": 844,
+          "backgroundColor": "#030014",
+          "children": [
+            {
+              "name": "Poster Image",
+              "type": "IMAGE",
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 550,
+              "fills": [
+                {
+                  "type": "IMAGE",
+                  "imageRef": "poster-placeholder"
+                }
+              ]
+            },
+            {
+              "name": "Save Button - Unsaved",
+              "type": "FRAME",
+              "x": 334,
+              "y": 16,
+              "width": 40,
+              "height": 40,
+              "cornerRadius": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 1, "g": 1, "b": 1, "a": 0.7 }
+                }
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": { "r": 0, "g": 0, "b": 0, "a": 0.25 },
+                  "offset": { "x": 0, "y": 2 },
+                  "radius": 8
+                }
+              ],
+              "children": [
+                {
+                  "name": "Bookmark Icon Outline",
+                  "type": "VECTOR",
+                  "x": 10,
+                  "y": 8,
+                  "width": 20,
+                  "height": 24,
+                  "fills": [],
+                  "strokes": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.012, "g": 0, "b": 0.078, "a": 1 }
+                    }
+                  ],
+                  "strokeWeight": 2,
+                  "description": "Outline bookmark icon when movie is NOT saved"
+                }
+              ]
+            },
+            {
+              "name": "Play Button",
+              "type": "FRAME",
+              "x": 320,
+              "y": 490,
+              "width": 56,
+              "height": 56,
+              "cornerRadius": 28,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Detail Screen - Save Button (Saved)",
+          "id": "frame-detail-saved",
+          "width": 390,
+          "height": 844,
+          "backgroundColor": "#030014",
+          "children": [
+            {
+              "name": "Poster Image",
+              "type": "IMAGE",
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 550
+            },
+            {
+              "name": "Save Button - Saved",
+              "type": "FRAME",
+              "x": 334,
+              "y": 16,
+              "width": 40,
+              "height": 40,
+              "cornerRadius": 20,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.671, "g": 0.545, "b": 1, "a": 1 },
+                  "colorHex": "#AB8BFF"
+                }
+              ],
+              "effects": [
+                {
+                  "type": "DROP_SHADOW",
+                  "color": { "r": 0, "g": 0, "b": 0, "a": 0.25 },
+                  "offset": { "x": 0, "y": 2 },
+                  "radius": 8
+                }
+              ],
+              "children": [
+                {
+                  "name": "Bookmark Icon Filled",
+                  "type": "VECTOR",
+                  "x": 10,
+                  "y": 8,
+                  "width": 20,
+                  "height": 24,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+                    }
+                  ],
+                  "description": "Filled bookmark icon when movie IS saved"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Save Toast - Added",
+          "id": "frame-toast-added",
+          "width": 390,
+          "height": 844,
+          "backgroundColor": "#030014",
+          "children": [
+            {
+              "name": "Toast Container",
+              "type": "FRAME",
+              "x": 45,
+              "y": 744,
+              "width": 300,
+              "height": 48,
+              "cornerRadius": 24,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.133, "g": 0.122, "b": 0.239, "a": 0.95 },
+                  "colorHex": "#221F3D"
+                }
+              ],
+              "children": [
+                {
+                  "name": "Checkmark Icon",
+                  "type": "VECTOR",
+                  "x": 16,
+                  "y": 14,
+                  "width": 20,
+                  "height": 20,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.671, "g": 0.545, "b": 1, "a": 1 }
+                    }
+                  ]
+                },
+                {
+                  "name": "Toast Text",
+                  "type": "TEXT",
+                  "x": 44,
+                  "y": 14,
+                  "characters": "Added to watchlist",
+                  "style": {
+                    "fontFamily": "Inter",
+                    "fontWeight": 500,
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                    "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Save Tab - With Movies",
+          "id": "frame-save-tab",
+          "width": 390,
+          "height": 844,
+          "backgroundColor": "#030014",
+          "children": [
+            {
+              "name": "Background Gradient",
+              "type": "IMAGE",
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844,
+              "opacity": 0.5,
+              "description": "Same bg.png gradient used on home screen"
+            },
+            {
+              "name": "Logo",
+              "type": "IMAGE",
+              "x": 171,
+              "y": 60,
+              "width": 48,
+              "height": 40,
+              "description": "App logo centered"
+            },
+            {
+              "name": "Section Title",
+              "type": "TEXT",
+              "x": 20,
+              "y": 120,
+              "characters": "My Watchlist",
+              "style": {
+                "fontFamily": "Inter",
+                "fontWeight": 700,
+                "fontSize": 18,
+                "lineHeight": 24,
+                "color": { "r": 1, "g": 1, "b": 1, "a": 1 }
+              }
+            },
+            {
+              "name": "Movie Count",
+              "type": "TEXT",
+              "x": 20,
+              "y": 148,
+              "characters": "3 movies saved",
+              "style": {
+                "fontFamily": "Inter",
+                "fontWeight": 400,
+                "fontSize": 14,
+                "lineHeight": 20,
+                "color": { "r": 0.659, "g": 0.710, "b": 0.859, "a": 1 },
+                "colorHex": "#A8B5DB"
+              }
+            },
+            {
+              "name": "Movie Grid",
+              "type": "FRAME",
+              "x": 20,
+              "y": 180,
+              "width": 350,
+              "layoutMode": "HORIZONTAL",
+              "layoutWrap": "WRAP",
+              "itemSpacing": 20,
+              "counterAxisSpacing": 16,
+              "children": [
+                {
+                  "name": "Movie Card 1",
+                  "type": "FRAME",
+                  "width": 103,
+                  "height": 260,
+                  "description": "Reuse existing MovieCard component. Same 30% width, poster + title + rating layout."
+                },
+                {
+                  "name": "Movie Card 2",
+                  "type": "FRAME",
+                  "width": 103,
+                  "height": 260
+                },
+                {
+                  "name": "Movie Card 3",
+                  "type": "FRAME",
+                  "width": 103,
+                  "height": 260
+                }
+              ]
+            },
+            {
+              "name": "Tab Bar",
+              "type": "FRAME",
+              "x": 20,
+              "y": 756,
+              "width": 350,
+              "height": 52,
+              "cornerRadius": 50,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "color": { "r": 0.059, "g": 0.051, "b": 0.137, "a": 1 },
+                  "colorHex": "#0F0D23"
+                }
+              ],
+              "description": "Existing tab bar - Save tab should be highlighted/active"
+            }
+          ]
+        },
+        {
+          "name": "Save Tab - Empty State",
+          "id": "frame-save-empty",
+          "width": 390,
+          "height": 844,
+          "backgroundColor": "#030014",
+          "children": [
+            {
+              "name": "Background Gradient",
+              "type": "IMAGE",
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 844,
+              "opacity": 0.5
+            },
+            {
+              "name": "Logo",
+              "type": "IMAGE",
+              "x": 171,
+              "y": 60,
+              "width": 48,
+              "height": 40
+            },
+            {
+              "name": "Empty State Container",
+              "type": "FRAME",
+              "x": 45,
+              "y": 300,
+              "width": 300,
+              "height": 200,
+              "layoutMode": "VERTICAL",
+              "primaryAxisAlignItems": "CENTER",
+              "counterAxisAlignItems": "CENTER",
+              "itemSpacing": 16,
+              "children": [
+                {
+                  "name": "Empty Bookmark Icon",
+                  "type": "VECTOR",
+                  "width": 48,
+                  "height": 48,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.659, "g": 0.710, "b": 0.859, "a": 0.5 }
+                    }
+                  ]
+                },
+                {
+                  "name": "Empty Title",
+                  "type": "TEXT",
+                  "characters": "No saved movies yet",
+                  "style": {
+                    "fontFamily": "Inter",
+                    "fontWeight": 600,
+                    "fontSize": 18,
+                    "lineHeight": 24,
+                    "color": { "r": 1, "g": 1, "b": 1, "a": 1 },
+                    "textAlign": "CENTER"
+                  }
+                },
+                {
+                  "name": "Empty Subtitle",
+                  "type": "TEXT",
+                  "characters": "Browse and save movies you want to watch!",
+                  "style": {
+                    "fontFamily": "Inter",
+                    "fontWeight": 400,
+                    "fontSize": 14,
+                    "lineHeight": 20,
+                    "color": { "r": 0.659, "g": 0.710, "b": 0.859, "a": 1 },
+                    "textAlign": "CENTER"
+                  }
+                },
+                {
+                  "name": "Browse Button",
+                  "type": "FRAME",
+                  "width": 200,
+                  "height": 44,
+                  "cornerRadius": 8,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "color": { "r": 0.671, "g": 0.545, "b": 1, "a": 1 },
+                      "colorHex": "#AB8BFF"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "Browse Button Text",
+                      "type": "TEXT",
+                      "characters": "Browse Movies",
+                      "style": {
+                        "fontFamily": "Inter",
+                        "fontWeight": 600,
+                        "fontSize": 14,
+                        "color": { "r": 1, "g": 1, "b": 1, "a": 1 },
+                        "textAlign": "CENTER"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "designTokens": {
+    "colors": {
+      "primary": "#030014",
+      "secondary": "#151312",
+      "accent": "#AB8BFF",
+      "light-100": "#D6C7FF",
+      "light-200": "#A8B5DB",
+      "light-300": "#9CA4AB",
+      "dark-100": "#221F3D",
+      "dark-200": "#0F0D23",
+      "white": "#FFFFFF",
+      "save-button-unsaved-bg": "rgba(255, 255, 255, 0.7)",
+      "save-button-saved-bg": "#AB8BFF"
+    },
+    "spacing": {
+      "save-button-size": 40,
+      "save-button-border-radius": 20,
+      "save-button-margin": 16,
+      "toast-height": 48,
+      "toast-border-radius": 24,
+      "grid-gap": 20,
+      "grid-columns": 3,
+      "card-width-percent": "30%"
+    },
+    "typography": {
+      "section-title": {
+        "fontFamily": "Inter",
+        "fontWeight": 700,
+        "fontSize": 18
+      },
+      "subtitle": {
+        "fontFamily": "Inter",
+        "fontWeight": 400,
+        "fontSize": 14
+      },
+      "toast": {
+        "fontFamily": "Inter",
+        "fontWeight": 500,
+        "fontSize": 14
+      }
+    },
+    "animations": {
+      "save-button-press": {
+        "type": "spring",
+        "damping": 15,
+        "stiffness": 150,
+        "description": "Bounce effect on save button tap"
+      },
+      "toast-enter": {
+        "type": "slide-up",
+        "duration": 300,
+        "easing": "ease-out"
+      },
+      "toast-exit": {
+        "type": "fade-out",
+        "duration": 200,
+        "delay": 2000
+      }
+    }
+  }
+}
